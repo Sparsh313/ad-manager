@@ -2,18 +2,16 @@ const express = require("express");
 const router = express.Router();
 
 const {
-  createTag,
-  getTagByPage,
-  updateTag,
-  deleteTag,
-  getAllTag,
+  createAdTag,
+  getAdTagByPage,
+  updateAdTag,
+  deleteAdTag,
 } = require("../controllers/adTagController");
 
-router.post("/", createTag);
-router.get("/all", getAllTag);
-router.get("/:page", getTagByPage);
-router.patch("/:id", updateTag);
-router.delete("/:id", deleteTag);
+router.post("/", createAdTag);
+router.get("/:page", getAdTagByPage);
+router.put("/:id", updateAdTag);
+router.delete("/:id", deleteAdTag);
+
 
 module.exports = router;
-    

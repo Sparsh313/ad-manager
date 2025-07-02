@@ -1,22 +1,26 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const adTagSchema = new mongoose.Schema({
-  page: {
-    type: String,
-    required: true,
+const Adtag = new mongoose.Schema(
+  {
+    creatorId: {
+      type: String,
+      required: true,
+    },
+    page: {
+      type: String,
+      required: true,
+    },
+    script_snippet: {
+      type: String,
+      required: true,
+    },
+    placement: {
+      type: String,
+      enum: ["head", "body"],
+      default: "body",
+    },
   },
-  platform: {
-    type: String,
-    required: true,
-  },
-  tags: {
-    title: { type: String },
-    description: { type: String },
-    keywords: [{ type: String }],
-    otherTags: [{ type: String }],
-  },
-  apiKey: { type: String },
-  createdAt: { type: Date, default: Date.now },
-});
+  { timestamps: true }
+);
 
-module.exports = mongoose.model('AdTag', adTagSchema);
+module.exports = mongoose.model("Adtag", Adtag);

@@ -19,6 +19,7 @@ function MetaTagInjector({ page }) {
           if (Array.isArray(tags.keywords)) allKeywords.push(...tags.keywords);
         });
 
+        console.log(allTitles, allDescriptions, allKeywords);
         // Set merged values
         document.title = allTitles.join(" | ");
 
@@ -35,7 +36,7 @@ function MetaTagInjector({ page }) {
           }
         };
 
-        setMeta("description", allDescriptions.join(". "));
+        setMeta("description", allDescriptions.join(", "));
         setMeta("keywords", [...new Set(allKeywords)].join(", "));
       } catch (err) {
         console.error("Meta tag fetch failed:", err);

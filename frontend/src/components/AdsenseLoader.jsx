@@ -41,8 +41,8 @@ function AdSenseLoader({ page }) {
           script.setAttribute("data-checked-head", "true");
 
           document.head.appendChild(script);
-          console.log("📌 Head children now:", [...document.head.children]);
-          // console.log("✅ Injected AdSense script for:", page, apiKey);
+          // console.log("📌 Head children now:", [...document.head.children]);
+          console.log("✅ Injected AdSense script for:", page, apiKey);
         }, 100); // slight delay helps in fast React remount
       } catch (err) {
         console.error("🚨 AdSense load failed:", err);
