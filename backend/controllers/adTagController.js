@@ -81,14 +81,13 @@ exports.getAdTagByPage = async (req, res) => {
 exports.updateAdTag = async (req, res) => {
   const { id } = req.params;
   const { script_snippet, placement, page } = req.body;
-  console.log(id);
+  // console.log(id);
   try {
     const updatedAd = await AdTag.findByIdAndUpdate(
       id,
       { script_snippet, placement, page },
       { new: true, runValidators: true}
     );
-    console.log("hey");
     if (!updatedAd) {
       return res
         .status(404)

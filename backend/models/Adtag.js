@@ -4,7 +4,7 @@ const Adtag = new mongoose.Schema(
   {
     creatorId: {
       type: String,
-      required: true,
+      // required: true,
     },
     page: {
       type: String,

@@ -7,10 +7,8 @@ import AdminPanel from "./pages/AdminPanel";
 function App() {
   return (
     <div>
-      <nav style={{ marginBottom: "20px" }}>
         <Link to="/">Home</Link> |<Link to="/course">Course</Link> |
         <Link to="/admin">Admin Panel</Link>
-      </nav>
 
       <Routes>
         <Route path="/" element={<HomePage />} />
