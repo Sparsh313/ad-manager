@@ -1,3 +1,5 @@
+// AdTag
+
 const mongoose = require("mongoose");
 
 const Adtag = new mongoose.Schema(
