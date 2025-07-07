@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { BASE_URL } from "../utils/api";
 
 const AdminPanel = () => {
   const [scriptSnippet, setScriptSnippet] = useState("");
@@ -8,7 +9,7 @@ const AdminPanel = () => {
   const [scripts, setScripts] = useState([]);
   const [editingId, setEditingId] = useState(null);
 
-  const apiBase = "http://localhost:5000/api/ad-tag";
+  const apiBase = `${BASE_URL}api/ad-tag`;
 
   // Fetch scripts
   const fetchScripts = async () => {

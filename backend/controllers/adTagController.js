@@ -35,7 +35,7 @@ exports.updateAdTag = async (req, res) => {
     const updatedAd = await AdTag.findByIdAndUpdate(
       id,
       { script_snippet, placement, page },
-      { new: true, runValidators: true}
+      { new: true, runValidators: true }
     );
     if (!updatedAd) {
       return res

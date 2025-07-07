@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import axios from "axios";
+import { BASE_URL } from "../utils/api";
+
 
 const HomePage = () => {
   useEffect(() => {
@@ -9,9 +11,12 @@ const HomePage = () => {
         .replace(/<\/script>/gi, "")
         .trim();
 
+  const apiBase = `${BASE_URL}api/ad-tag`;
+
+
     const fetchAndInjectScripts = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/ad-tag/home");
+        const res = await axios.get(`${apiBase}/home`);
         const scripts = res.data;
 
         scripts.forEach((script) => {

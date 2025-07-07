@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import axios from "axios";
+import { BASE_URL } from "../utils/api";
 
 const CoursePage = () => {
   useEffect(() => {
@@ -9,9 +10,11 @@ const CoursePage = () => {
         .replace(/<\/script>/gi, "")
         .trim();
 
+    const apiBase = `${BASE_URL}api/ad-tag`;
+
     const fetchAndInjectScripts = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/ad-tag/course");
+        const res = await axios.get(`${apiBase}/course`);
         const scripts = res.data;
 
         scripts.forEach((script) => {
@@ -49,7 +52,8 @@ const CoursePage = () => {
     <div style={{ padding: "20px" }}>
       <h1>🏠 course Page</h1>
       <p>
-        This is the course Page. Scripts will be loaded and unloaded as per route.
+        This is the course Page. Scripts will be loaded and unloaded as per
+        route.
       </p>
     </div>
   );
