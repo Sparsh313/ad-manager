@@ -10,6 +10,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.get("/api/ping", (req, res) => {
+  res.send("pong");
+});
 app.use("/api/ad-tag", adTagRoutes);
 
 const PORT = process.env.PORT || 5000;
