@@ -7,13 +7,12 @@ import AdminPanel from "./pages/AdminPanel";
 function App() {
   return (
     <div>
-        <Link to="/">Home</Link> |<Link to="/course">Course</Link> |
-        <Link to="/admin">Admin Panel</Link>
-
+      <Link to="/home">Home</Link> |<Link to="/course">Course</Link> |
+      <Link to="/">Admin Panel</Link>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<AdminPanel />} />
+        <Route path="/home" element={<HomePage />} />
         <Route path="/course" element={<CoursePage />} />
-        <Route path="/admin" element={<AdminPanel />} />
       </Routes>
     </div>
   );
