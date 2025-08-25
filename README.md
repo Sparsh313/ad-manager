@@ -119,17 +119,10 @@ backend/
   ```
 
 ✅ Injected Tags (Console):
-arduino
-Copy
-Edit
 { title: "DSA", description: "DSA Sheet", keywords: ["DSA", "Coding", ...] }
 ✅ Injected AdSense script for: home
 
 ✅ DOM View (Production):
-html
-Copy
-Edit
-
 <head>
   <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" data-ad-client="ca-pub-xxxxxxxxxxxx"></script>
   <meta name="description" content="DSA Sheet, Best CS Courses" />
@@ -138,5 +131,5 @@ Edit
 
 🙋‍♂️ Author
 Sparsh Singh
-Intern at [Your Company Name]
-GitHub: @yourusername
+Intern at BinaryFlo
+GitHub: @Sparsh313
